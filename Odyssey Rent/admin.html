@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Admin - Dashboard</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Odyssey<span class="accent">Rent</span></div>
+      <nav class="nav">
+        <button onclick="logout()">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Menu Admin</h2>
+      <ul>
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="#">Kelola Armada</a></li>
+        <li><a href="#">Kelola Pesanan</a></li>
+        <li><a href="#">Laporan</a></li>
+      </ul>
+    </aside>
+
+    <!-- Konten Utama -->
+<main class="main-content" id="mainContent">
+  <section id="dashboardSection" class="content-section active">
+    <h1>Dashboard Admin</h1>
+    <p>Selamat datang, <span id="adminName">Admin</span></p>
+    <div class="stats">
+      <div class="card"><h3>Total Armada</h3><p>10 Mobil</p></div>
+      <div class="card"><h3>Total Pesanan</h3><p>0 Transaksi</p></div>
+      <div class="card"><h3>Pendapatan Bulan Ini</h3><p>Rp 0</p></div>
+    </div>
+  </section>
+
+  <section id="armadaSection" class="content-section">
+  <h2>Kelola Armada</h2>
+  <p>(Demo) Tambah, edit, hapus mobil — fitur backend akan ditambahkan nanti.</p>
+  <button>Tambah Mobil</button>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>ID Kendaraan</th>
+        <th>Jenis</th>
+        <th>Plat Nomor</th>
+        <th>Model</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>SUV</td>
+        <td>A 1234 BC</td>
+        <td>Toyota Fortuner</td>
+        <td>Tersedia</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>MPV</td>
+        <td>A 5678 DE</td>
+        <td>Toyota Innova Reborn</td>
+        <td>Tersedia</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Sedan</td>
+        <td>B 9012 FG</td>
+        <td>Honda Civic</td>
+        <td>Disewa</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+  <section id="pesananSection" class="content-section">
+    <h2>Kelola Pesanan</h2>
+    <p>(Demo) Lihat daftar pesanan di sini.</p>
+    <ul>
+      <li>Belum ada pesanan saat ini.</li>
+    </ul>
+  </section>
+
+  <section id="laporanSection" class="content-section">
+    <h2>Laporan</h2>
+    <p>(Demo) Laporan keuangan dan aktivitas akan muncul di sini.</p>
+  </section>
+</main>
+  </div>
+  <script>
+    function logout() {
+      localStorage.removeItem("role");
+      window.location.href = "index.html";
+    }
+  </script>
+  <script src="assets/js/script.js"></script>
+
+  <script>
+  const name = localStorage.getItem("name");
+  document.getElementById("adminName").textContent = name || "Admin";
+</script>
+
+</body>
+</html>

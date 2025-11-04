@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda Pengguna - Odyssey Rent</title>
+  <link rel="stylesheet" href="assets/css/styleuser.css"/>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">Odyssey<span class="accent">Rent</span></div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#" class="active">Beranda</a></li>
+          <li><a href="#">Promo</a></li>
+          <li><a href="#">Unit</a></li>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#" class="btn-outline">Pemesanan</a></li>
+        </ul>
+      </nav>
+
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+<section class="hero">
+  <div class="overlay"></div>
+  <h1>Sewa Mobil Mudah & Cepat</h1>
+  <p>Temukan unit mobil terbaik untuk perjalanan Anda bersama OdysseyRent.</p>
+  <a href="#" class="btn-primary">Pesan Sekarang</a>
+</section>
+
+
+  <!-- ===== DAFTAR UNIT ===== -->
+  <main class="container">
+  <h2>Unit Tersedia</h2>
+  <div class="unit-grid">
+    
+    <div class="unit-card">
+      <img src="assets/img/avanza.jpg" alt="Toyota Avanza">
+      <h3>Toyota Avanza</h3>
+      <ul class="spec-list">
+        <li>Tempat Duduk: 7</li>
+        <li>Transmisi: Manual</li>
+        <li>Bagasi: Sedang</li>
+        <li>Bahan Bakar: Bensin</li>
+        <li>Plat: A 1*** BC</li>
+      </ul>
+    </div>
+
+    <div class="unit-card">
+      <img src="assets/img/innova.jpg" alt="Innova Reborn">
+      <h3>Innova Reborn</h3>
+      <ul class="spec-list">
+        <li>Tempat Duduk: 7</li>
+        <li>Transmisi: Automatic</li>
+        <li>Bagasi: Luas</li>
+        <li>Bahan Bakar: Diesel</li>
+        <li>Plat: A 2*** CD</li>
+      </ul>
+    </div>
+
+    <div class="unit-card">
+      <img src="assets/img/fortuner.jpg" alt="Toyota Fortuner">
+      <h3>Toyota Fortuner</h3>
+      <ul class="spec-list">
+        <li>Tempat Duduk: 7</li>
+        <li>Transmisi: Automatic</li>
+        <li>Bagasi: Luas</li>
+        <li>Bahan Bakar: Diesel</li>
+        <li>Plat: A 3*** EF</li>
+      </ul>
+    </div>
+
+    <div class="unit-card">
+      <img src="assets/img/brio.jpg" alt="Honda Brio">
+      <h3>Honda Brio</h3>
+      <ul class="spec-list">
+        <li>Tempat Duduk: 5</li>
+        <li>Transmisi: Manual</li>
+        <li>Bagasi: Kecil</li>
+        <li>Bahan Bakar: Bensin</li>
+        <li>Plat: A 4*** GH</li>
+      </ul>
+    </div>
+
+    <div class="unit-card">
+      <img src="assets/img/ertiga.jpg" alt="Suzuki Ertiga">
+      <h3>Suzuki Ertiga</h3>
+      <ul class="spec-list">
+        <li>Tempat Duduk: 7</li>
+        <li>Transmisi: Manual</li>
+        <li>Bagasi: Sedang</li>
+        <li>Bahan Bakar: Bensin</li>
+        <li>Plat: A 5*** IJ</li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+  <!-- ===== PROMO SECTION ===== -->
+  <section class="promo">
+    <h2>Promo Bulan Ini</h2>
+    <p>Dapatkan potongan harga hingga <strong>25%</strong> untuk pemesanan lebih dari 3 hari!</p>
+    <a href="#" class="btn-secondary">Lihat Promo</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p>&copy; 2025 OdysseyRent. Semua hak dilindungi.</p>
+  </footer>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("role");
+      window.location.href = "index.html";
+    }
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
