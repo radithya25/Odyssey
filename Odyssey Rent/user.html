@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beranda Pengguna - Odyssey Rent</title>
   <link rel="stylesheet" href="assets/css/styleuser.css"/>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
   <!-- ===== HEADER ===== -->
@@ -14,11 +19,11 @@
 
       <nav class="nav">
         <ul>
-          <li><a href="#" class="active">Beranda</a></li>
-          <li><a href="#">Promo</a></li>
-          <li><a href="#">Unit</a></li>
-          <li><a href="#">Tentang Kami</a></li>
-          <li><a href="#" class="btn-outline">Pemesanan</a></li>
+          <li><a href="#home" class="active">Beranda</a></li>
+          <li><a href="#tentang">Tentang Kami</a></li>
+          <li><a href="#promo">Promo</a></li>
+          <li><a href="#unit">Unit</a></li>
+          <li><a href="#pemesanan" class="btn-outline">Pemesanan</a></li>
         </ul>
       </nav>
 
@@ -27,88 +32,180 @@
   </header>
 
   <!-- ===== HERO SECTION ===== -->
-<section class="hero">
-  <div class="overlay"></div>
-  <h1>Sewa Mobil Mudah & Cepat</h1>
-  <p>Temukan unit mobil terbaik untuk perjalanan Anda bersama OdysseyRent.</p>
-  <a href="#" class="btn-primary">Pesan Sekarang</a>
+  <section id="home" class="hero">
+    <div class="overlay"></div>
+    <h1>Sewa Mobil Mudah & Cepat</h1>
+    <p>Temukan unit mobil terbaik untuk perjalanan Anda bersama OdysseyRent.</p>
+    <a href="#pemesanan" class="btn-primary">Pesan Sekarang</a>
+  </section>
+
+  <!-- ===== TENTANG KAMI ===== -->
+  <section id="tentang" class="about">
+    <div class="about-content">
+      <h2>Tentang Kami</h2>
+      <p>
+        OdysseyRent adalah layanan penyewaan mobil terpercaya yang berkomitmen memberikan kenyamanan,
+        keamanan, dan kemudahan bagi setiap pelanggan. Kami menawarkan beragam jenis kendaraan — dari mobil
+        keluarga hingga kendaraan premium — dengan kondisi terawat dan harga bersaing.
+      </p>
+      <p>
+        Dengan dukungan tim profesional dan sistem pemesanan yang cepat, kami hadir untuk memastikan
+        setiap perjalanan Anda menjadi pengalaman yang menyenangkan.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== PROMO SECTION ===== -->
+  <section id="promo" class="promo">
+    <h2>Promo Bulan Ini</h2>
+    <p>Dapatkan potongan harga hingga <strong>25%</strong> untuk pemesanan lebih dari 3 hari!</p>
+    <a href="#pemesanan" class="btn-secondary">Lihat Promo</a>
+  </section>
+
+  <!-- ===== DAFTAR UNIT ===== -->
+  <main id="unit" class="container">
+    <h2>Unit Tersedia</h2>
+    <div class="unit-grid">
+      <div class="unit-card">
+        <img src="assets/img/avanza.jpg" alt="Toyota Avanza">
+        <h3>Toyota Avanza</h3>
+        <ul class="spec-list">
+          <li>Tempat Duduk: 7</li>
+          <li>Transmisi: Manual</li>
+          <li>Bagasi: Sedang</li>
+          <li>Bahan Bakar: Bensin</li>
+          <li>Plat: A 1*** BC</li>
+        </ul>
+      </div>
+
+      <div class="unit-card">
+        <img src="assets/img/innova.jpg" alt="Innova Reborn">
+        <h3>Innova Reborn</h3>
+        <ul class="spec-list">
+          <li>Tempat Duduk: 7</li>
+          <li>Transmisi: Automatic</li>
+          <li>Bagasi: Luas</li>
+          <li>Bahan Bakar: Diesel</li>
+          <li>Plat: A 2*** CD</li>
+        </ul>
+      </div>
+
+      <div class="unit-card">
+        <img src="assets/img/fortuner.jpg" alt="Toyota Fortuner">
+        <h3>Toyota Fortuner</h3>
+        <ul class="spec-list">
+          <li>Tempat Duduk: 7</li>
+          <li>Transmisi: Automatic</li>
+          <li>Bagasi: Luas</li>
+          <li>Bahan Bakar: Diesel</li>
+          <li>Plat: A 3*** EF</li>
+        </ul>
+      </div>
+
+      <div class="unit-card">
+        <img src="assets/img/brio.jpg" alt="Honda Brio">
+        <h3>Honda Brio</h3>
+        <ul class="spec-list">
+          <li>Tempat Duduk: 5</li>
+          <li>Transmisi: Manual</li>
+          <li>Bagasi: Kecil</li>
+          <li>Bahan Bakar: Bensin</li>
+          <li>Plat: A 4*** GH</li>
+        </ul>
+      </div>
+
+      <div class="unit-card">
+        <img src="assets/img/ertiga.jpg" alt="Suzuki Ertiga">
+        <h3>Suzuki Ertiga</h3>
+        <ul class="spec-list">
+          <li>Tempat Duduk: 7</li>
+          <li>Transmisi: Manual</li>
+          <li>Bagasi: Sedang</li>
+          <li>Bahan Bakar: Bensin</li>
+          <li>Plat: A 5*** IJ</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+<!-- ===== PEMESANAN SECTION ===== -->
+<section class="pemesanan" id="pemesanan">
+  <div class="pemesanan-container">
+    <h2>Detail Pesanan</h2>
+    <form class="booking-form">
+
+      <!-- DETAIL PEMESANAN -->
+       <div class="form-group">
+        <label for="kebutuhan">KEBUTUHAN <span>*</span></label>
+        <select id="kebutuhan" name="kebutuhan" required>
+          <option value="">Pilih Kebutuhan</option>
+          <option value="pribadi">Pribadi</option>
+          <option value="bisnis">Bisnis</option>
+          <option value="perjalanan">Perjalanan Jarak Jauh</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="tanggal_selesai">TANGGAL SELESAI <span>*</span></label>
+        <input type="date" id="tanggal_selesai" name="tanggal_selesai" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="tanggal_mulai">TANGGAL MULAI <span>*</span></label>
+        <input type="date" id="tanggal_mulai" name="tanggal_mulai" required>
+      </div>
+
+      <div class="form-group">
+        <label for="masa_sewa">MASA SEWA <span>*</span></label>
+        <select id="masa_sewa" name="masa_sewa" required>
+          <option value="">Pilih Masa Sewa</option>
+          <option value="harian">Harian</option>
+          <option value="mingguan">Mingguan</option>
+          <option value="bulanan">Bulanan</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="jenis_kendaraan">JENIS KENDARAAN <span>*</span></label>
+        <select id="jenis_kendaraan" name="jenis_kendaraan" required>
+          <option value="">Pilih Jenis Kendaraan</option>
+          <option value="avanza">Toyota Avanza</option>
+          <option value="innova">Innova Reborn</option>
+          <option value="fortuner">Toyota Fortuner</option>
+          <option value="brio">Honda Brio</option>
+          <option value="ertiga">Suzuki Ertiga</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="waktu_pengambilan">WAKTU PENGAMBILAN <span>*</span></label>
+        <input type="time" id="waktu_pengambilan" name="waktu_pengambilan" required>
+      </div>
+
+      <!-- DATA DIRI -->
+      <div class="form-group">
+        <label for="nama">NAMA LENGKAP <span>*</span></label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">EMAIL (GMAIL) <span>*</span></label>
+        <input type="email" id="email" name="email" placeholder="contoh@gmail.com" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telepon">NOMOR TELEPON (+62) <span>*</span></label>
+        <input type="tel" id="telepon" name="telepon" placeholder="+62..." pattern="^\+62[0-9]{9,13}$" required>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn-primary">Lanjutkan</button>
+      </div>
+    </form>
+  </div>
 </section>
 
 
-  <!-- ===== DAFTAR UNIT ===== -->
-  <main class="container">
-  <h2>Unit Tersedia</h2>
-  <div class="unit-grid">
-    
-    <div class="unit-card">
-      <img src="assets/img/avanza.jpg" alt="Toyota Avanza">
-      <h3>Toyota Avanza</h3>
-      <ul class="spec-list">
-        <li>Tempat Duduk: 7</li>
-        <li>Transmisi: Manual</li>
-        <li>Bagasi: Sedang</li>
-        <li>Bahan Bakar: Bensin</li>
-        <li>Plat: A 1*** BC</li>
-      </ul>
-    </div>
-
-    <div class="unit-card">
-      <img src="assets/img/innova.jpg" alt="Innova Reborn">
-      <h3>Innova Reborn</h3>
-      <ul class="spec-list">
-        <li>Tempat Duduk: 7</li>
-        <li>Transmisi: Automatic</li>
-        <li>Bagasi: Luas</li>
-        <li>Bahan Bakar: Diesel</li>
-        <li>Plat: A 2*** CD</li>
-      </ul>
-    </div>
-
-    <div class="unit-card">
-      <img src="assets/img/fortuner.jpg" alt="Toyota Fortuner">
-      <h3>Toyota Fortuner</h3>
-      <ul class="spec-list">
-        <li>Tempat Duduk: 7</li>
-        <li>Transmisi: Automatic</li>
-        <li>Bagasi: Luas</li>
-        <li>Bahan Bakar: Diesel</li>
-        <li>Plat: A 3*** EF</li>
-      </ul>
-    </div>
-
-    <div class="unit-card">
-      <img src="assets/img/brio.jpg" alt="Honda Brio">
-      <h3>Honda Brio</h3>
-      <ul class="spec-list">
-        <li>Tempat Duduk: 5</li>
-        <li>Transmisi: Manual</li>
-        <li>Bagasi: Kecil</li>
-        <li>Bahan Bakar: Bensin</li>
-        <li>Plat: A 4*** GH</li>
-      </ul>
-    </div>
-
-    <div class="unit-card">
-      <img src="assets/img/ertiga.jpg" alt="Suzuki Ertiga">
-      <h3>Suzuki Ertiga</h3>
-      <ul class="spec-list">
-        <li>Tempat Duduk: 7</li>
-        <li>Transmisi: Manual</li>
-        <li>Bagasi: Sedang</li>
-        <li>Bahan Bakar: Bensin</li>
-        <li>Plat: A 5*** IJ</li>
-      </ul>
-    </div>
-
-  </div>
-</main>
-
-  <!-- ===== PROMO SECTION ===== -->
-  <section class="promo">
-    <h2>Promo Bulan Ini</h2>
-    <p>Dapatkan potongan harga hingga <strong>25%</strong> untuk pemesanan lebih dari 3 hari!</p>
-    <a href="#" class="btn-secondary">Lihat Promo</a>
-  </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
@@ -121,6 +218,8 @@
       window.location.href = "index.html";
     }
   </script>
-  <script src="assets/js/main.js"></script>
+
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

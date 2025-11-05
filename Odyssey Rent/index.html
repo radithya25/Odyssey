@@ -21,6 +21,45 @@
     </form>
   </div>
 
-  <script src="assets/js/script.js"></script>
+  <!-- ===== PEMESANAN SECTION ===== -->
+<section class="pemesanan" id="pemesanan">
+  <div class="pemesanan-container">
+    <h2>Form Pemesanan</h2>
+    <p>Isi data berikut untuk melakukan reservasi mobil dengan mudah.</p>
+
+    <form class="booking-form">
+      <div class="form-group">
+        <label for="lokasi">Lokasi Penjemputan</label>
+        <input type="text" id="lokasi" name="lokasi" placeholder="Masukkan lokasi Anda" required>
+      </div>
+
+      <div class="form-group">
+        <label for="tanggal_mulai">Tanggal Mulai</label>
+        <input type="date" id="tanggal_mulai" name="tanggal_mulai" required>
+      </div>
+
+      <div class="form-group">
+        <label for="tanggal_selesai">Tanggal Selesai</label>
+        <input type="date" id="tanggal_selesai" name="tanggal_selesai" required>
+      </div>
+
+      <div class="form-group">
+        <label for="tipe_mobil">Tipe Mobil</label>
+        <select id="tipe_mobil" name="tipe_mobil" required>
+          <option value="">Pilih Tipe Mobil</option>
+          <option value="avanza">Toyota Avanza</option>
+          <option value="innova">Innova Reborn</option>
+          <option value="fortuner">Toyota Fortuner</option>
+          <option value="brio">Honda Brio</option>
+          <option value="ertiga">Suzuki Ertiga</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-primary">Cari Mobil</button>
+    </form>
+  </div>
+</section>
+
+  <script src="assets/js/user.js"></script>
 </body>
 </html>

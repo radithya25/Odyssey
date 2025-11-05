@@ -1,4 +1,4 @@
-// ========================================================
+ // ========================================================
 // LOGIN PAGE (index.html) - Simulasi Login Tanpa Backend
 // ========================================================
 const users = [
@@ -39,6 +39,48 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ========================================================
+  // ADMIN DASHBOARD - Navigasi Sidebar antar Section
+  // ========================================================
+  const menuLinks = document.querySelectorAll(".sidebar ul li a");
+  const sections = document.querySelectorAll(".content-section");
+  const adminName = document.getElementById("adminName");
+
+  // Tampilkan nama admin dari localStorage
+  if (adminName) {
+    const name = localStorage.getItem("name");
+    adminName.textContent = name || "Admin";
+  }
+
+  // Cegah error jika ini bukan halaman admin
+  if (menuLinks.length > 0 && sections.length > 0) {
+    menuLinks.forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+
+        // Hapus status aktif dari semua link
+        menuLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+
+        // Sembunyikan semua section
+        sections.forEach(sec => sec.classList.remove("active"));
+
+        // Tentukan section mana yang tampil
+        const text = link.textContent.trim().toLowerCase();
+        if (text === "dashboard") {
+          document.getElementById("dashboardSection").classList.add("active");
+        } else if (text === "kelola armada") {
+          document.getElementById("armadaSection").classList.add("active");
+        } else if (text === "kelola pesanan") {
+          document.getElementById("pesananSection").classList.add("active");
+        } else if (text === "laporan") {
+          document.getElementById("laporanSection").classList.add("active");
+        }
+      });
+    });
+  }
+
+
+  // ========================================================
   // LOGOUT FUNCTION - Dijalankan dari tombol Logout di Header
   // ========================================================
   window.logout = function () {
@@ -48,3 +90,5 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 });
 
+
+ 
